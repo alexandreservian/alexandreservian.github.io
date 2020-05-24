@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -30,6 +29,7 @@ export const pageQuery = graphql`
             date(locale: "pt-br", formatString: "YYYY-MM-DD")
             path
             title
+            folder
           }
         }
       }
