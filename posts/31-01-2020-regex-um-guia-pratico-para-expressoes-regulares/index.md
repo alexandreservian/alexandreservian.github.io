@@ -1,11 +1,11 @@
 ---
 path: /regex-um-guia-pratico-para-expressoes-regulares
-title: Regex":" Um guia prático para expressões regulares
+title: "Regex: Um guia prático para expressões regulares"
 subtitle: Aprenda regex de forma simples e fácil!
 date: 2020-01-31
 folder:
   - dev
-  - js
+  - regex
 tags:
   - javascript
   - js
