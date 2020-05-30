@@ -1,7 +1,7 @@
 ---
 path: /regex-um-guia-pratico-para-expressoes-regulares
 title: "Regex: Um guia prático para expressões regulares"
-subtitle: Aprenda regex de forma simples e fácil!
+subTitle: Aprenda regex de forma simples e fácil!
 date: 2020-01-31
 folder:
   - dev
@@ -18,7 +18,7 @@ tags:
 banner:
   author: Fran Jacquier
   href: https://unsplash.com/photos/iv6Xbp11olc
-  image: ./images/2020-05-18.entendendo-o-package-json/banner.jpg
+  image: ./images/banner.jpg
 ---
 
 Em toda nossa vida como programadores estaremos lidando com **regex** em algum momento. Seja para coisas comuns como **validar** emails ou data e até mesmo para fazer **parse** em textos em busca de um determinado padrão.
@@ -27,7 +27,7 @@ Nesse post, irei mostrar de forma simples e fácil como você pode criar suas pr
 
 ---
 
-## O que é uma expressão regular?
+### O que é uma expressão regular?
 
 De forma simples:
 
@@ -40,7 +40,7 @@ Com ela podemos lidar com as seguintes situações:
 - validação de formatos;
 - filtragem de informações
 
-## Criando nossas primeiras regex
+### Criando nossas primeiras regex
 
 Usando javascript podemos optar por duas formas de se criar uma regex. Podemos criar usando um **constructor**:
 
@@ -72,7 +72,7 @@ matches:   ^^^^^^^
 
 Podemos ver que, na primeira regex, ela ignorou o primeiro **A**. Isso acontece porque as regex são **case sensitive**. Notamos também na primeira regex que só houve **match** na primeira ocorrência. Para lidar com isso, usaremos **flags**.
 
-## Flags
+### Flags
 
 Elas adicionam comportamentos adicionais a nossas regras, como:
 
@@ -88,7 +88,7 @@ string: Ontem faltou água, Anteontem faltou luz
 matches:^^^^^                  ^^^^^
 ```
 
-## Operador pipe "|“
+### Operador pipe "|“
 
 Algumas vezes precisamos dar match em mais de **um** termo, para isso usamos o operador pipe `|` . Ele funciona basicamente como nosso operador lógico **OR** `||`. Assim podemos escrever:
 
@@ -106,7 +106,7 @@ string:  E = mc²
 matches: ^   ^ ^
 ```
 
-## Conjuntos “[]”
+### Conjuntos “[]”
 
 Com os conjuntos dizemos a regex que uma determinada casa pode ter diversos valores para dar match. Vejamos o seu uso:
 
@@ -150,7 +150,7 @@ string:  Paralelepípedo
 matches: ^ ^ ^ ^ ^ ^ ^
 ```
 
-## Metacaracteres
+### Metacaracteres
 
 Nas regex existem duas formas de caracteres, os **literais**, que representam o valor literal do caractere como `abc123` e os **metacaracteres** que possuem funções distintas dentro de um contexto na regex. Dois exemplos que acabamos de ver são o uso do `^` iniciando um conjunto negado e o uso do `-` em uma regra de conjunto com range `[1-9]`. Um metacaractere bastante recorrente é o **ponto** `.`, ele funciona como um **coringa**, sendo capaz de dar match em qualquer caractere, vejamos um exemplo:
 
@@ -182,7 +182,7 @@ matches: ^^^^^^^^^^^^
 
 Para um guia de consulta, criei um **[gist](https://gist.github.com/alexandreservian/124db2fab8a75474dd6fdc4f17f93a5d)** contendo muitos **metacaracteres** e shorthands e seus respectivos significado.
 
-## Quantificadores
+### Quantificadores
 
 Uma maneira de deixar suas regras ainda mais simples é com o uso dos quantificadores. Com eles podemos dizer quantas vezes uma **mesma** regra pode aparecer em **sequência**. Vejamos elas:
 
@@ -211,7 +211,7 @@ string:  Goolllll da Alemanha!!!
 matches: ^^^^^^^^
 ```
 
-## Âncoras
+### Âncoras
 
 Muitas vezes vamos precisar **delimitar** a ação da nossa regex. Desse modo podemos usar três metas para nos auxiliar nessa função.
 
@@ -272,7 +272,7 @@ https://www.facebook.com
 https://www.voxel.com.br
 ```
 
-## Grupos “()”
+### Grupos “()”
 
 Por fim, temos os grupos que facilita ainda mais nossas regras. Eles nos possibilita a criação de regras isoladas, possibilita a criação de referencias (retrovisores) para o **reuso** da mesma regra em outro local dentro de uma mesmo regex e ainda cria a possibilidade de **validações** dentro da regex. Seu uso é muito **diverso**, dando muito poder ao programador na hora de escrever suas regras. Veja um exemplo:
 
@@ -332,11 +332,11 @@ Dentro dos grupos especiais ainda temos os **positive lookbehind** e **negative 
 
 ---
 
-## Métodos de regex no js
+### Métodos de regex no js
 
 O objeto **regex** possui dois métodos: `exec` e `test`. Já com string possui 4 métodos: `match`, `replace`, `search` e `split`. Porém neste post vou me ater somente a 3 métodos: test, match e replace.
 
-### test
+#### test
 
 Usado para verificar se uma regex da match com uma string. Ela retorna sempre valor **boolean**. Este método é ideal para fazer **validações** como por exemplo validar se um email, telefone ou data estão corretos. Vejamos um exemplo validando números de telefone:
 
@@ -348,7 +348,7 @@ console.log(regex.test("(68)90499-9922")) //false
 console.log(regex.test("95088-2649")) //true
 ```
 
-### match
+#### match
 
 Ele retorna um array, com as string que deram match com a regex. Se não houver valor, ele retorna **null**. Vejamos um exemplo procurando cep validos em um texto:
 
@@ -366,7 +366,7 @@ console.log(text.match(regex))
 
 Vejamos acima que o último número não foi pego no match, pois ele não é um cep válido.
 
-### replace
+#### replace
 
 Usado para **substituir** strings que deram match por uma nova string. Segue um exemplo:
 
@@ -413,7 +413,7 @@ console.log(texto.replace(regex, funcao))
 
 ---
 
-## Conclusão
+### Conclusão
 
 Chegamos ao fim, o estudo de regex é muito interessante, sendo que possível fazer muitas coisas em diferentes linguagens. Fiz uma extensa lista de diversos problemas resolvidos com regex, confira abaixo:
 
@@ -426,7 +426,7 @@ Você ainda pode testar suas regex de forma mais visual pelos sites:
 
 Este é meu primeiro post, espero que tenha ajudado. Vlws.
 
-### Referências:
+#### Referências:
 
 - [A guide to JavaScript Regular Expressions](https://flaviocopes.com/javascript-regular-expressions/)
 - [20 Small Steps to Become a Regex Master](https://dev.to/awwsmm/20-small-steps-to-become-a-regex-master-mpc)
