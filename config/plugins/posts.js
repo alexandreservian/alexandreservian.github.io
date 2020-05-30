@@ -6,5 +6,18 @@ module.exports = [
       path: `posts`,
     },
   },
-  `gatsby-transformer-remark`,
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: "gatsby-remark-external-links",
+          options: {
+            target: "_blank",
+          },
+        },
+        `gatsby-remark-prismjs`,
+      ],
+    },
+  },
 ]
