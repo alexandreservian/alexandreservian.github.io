@@ -7,5 +7,6 @@ export const Content = styled.ul`
 `
 
 export const Item = styled.li`
-  padding: 10px 20px;
+  margin: 0;
+  padding: 0 20px 10px;
 `
