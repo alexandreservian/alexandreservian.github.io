@@ -3,20 +3,20 @@ module.exports = [
     resolve: `gatsby-plugin-sitemap`,
     options: {
       query: `
-          {
-            wp {
-              generalSettings {
-                siteUrl
-              }
+        {
+          site {
+            siteMetadata {
+              siteUrl
             }
-  
-            allSitePage {
-              nodes {
-                path
-              }
+          }
+          allSitePage {
+            nodes {
+              path
             }
-        }`,
-      resolveSiteUrl: ({ site, allSitePage }) => {
+          }
+        }
+      `,
+      resolveSiteUrl: ({ site }) => {
         return site.wp.generalSettings.siteUrl
       },
       serialize: ({ site, allSitePage }) =>
