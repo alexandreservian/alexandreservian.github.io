@@ -32,10 +32,11 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background: #000;
+  background: #111216;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 article,
 aside,
@@ -247,7 +248,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 h1 {
   margin-left: 0;
@@ -257,10 +258,10 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   color: inherit;
   font-family: "hack-bold", monospace, arial;
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
@@ -273,10 +274,10 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   color: inherit;
   font-family: "hack-bold", monospace, arial;
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
@@ -289,10 +290,10 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   color: inherit;
   font-family: "hack-bold", monospace, arial;
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
   line-height: 1.1;
@@ -305,10 +306,10 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   color: inherit;
   font-family: "hack-bold", monospace, arial;
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
@@ -321,10 +322,10 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   color: inherit;
   font-family: "hack-bold", monospace, arial;
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1;
@@ -337,10 +338,10 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   color: inherit;
   font-family: "hack-bold", monospace, arial;
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
@@ -353,7 +354,7 @@ hgroup {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 ul {
   margin-left: 1.45rem;
@@ -363,7 +364,7 @@ ul {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -375,7 +376,7 @@ ol {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -387,7 +388,7 @@ dl {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 dd {
   margin-left: 0;
@@ -397,7 +398,7 @@ dd {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 p {
   margin-left: 0;
@@ -407,7 +408,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 figure {
   margin-left: 0;
@@ -417,13 +418,13 @@ figure {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 pre {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   font-size: 0.85rem;
   line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
@@ -440,7 +441,7 @@ table {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
   font-size: 1rem;
   line-height: 1.45rem;
   border-collapse: collapse;
@@ -454,7 +455,7 @@ fieldset {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 blockquote {
   margin-left: 1.45rem;
@@ -464,7 +465,7 @@ blockquote {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 form {
   margin-left: 0;
@@ -474,7 +475,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 noscript {
   margin-left: 0;
@@ -484,7 +485,7 @@ noscript {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 iframe {
   margin-left: 0;
@@ -494,7 +495,7 @@ iframe {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 hr {
   margin-left: 0;
@@ -517,19 +518,19 @@ address {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 }
 b {
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
 }
 strong {
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
 }
 dt {
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
 }
 th {
-  font-weight: bold;
+  font-family: "hack-bold", monospace, arial;
 }
 li {
   margin-bottom: calc(1.45rem / 2);
@@ -640,6 +641,15 @@ pre tt:after {
 }
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 100%;
+    font-size: 15px;
   }
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  min-height: 100vh;
+}
+
+#gatsby-focus-wrapper {
+  position: relative;
 }
