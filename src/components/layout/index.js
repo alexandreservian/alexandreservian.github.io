@@ -1,15 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Header from "../header"
+import Footer from "../footer"
+import { MainContent } from "./style"
 import "../../assets/css/layout.css"
+import "../../assets/css/prism-nord.css"
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div>
+      <MainContent>
         <main>{children}</main>
-      </div>
+      </MainContent>
+      <Footer />
     </>
   )
 }
