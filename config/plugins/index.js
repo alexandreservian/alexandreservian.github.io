@@ -1,4 +1,11 @@
-const plugins = ["helmet", "posts", "images", "manifest", "analytics"]
+const plugins = [
+  "helmet",
+  "posts",
+  "images",
+  "manifest",
+  "analytics",
+  "sitemap",
+]
 
 module.exports = plugins
   .map(plugin => require(`./${plugin}`))
