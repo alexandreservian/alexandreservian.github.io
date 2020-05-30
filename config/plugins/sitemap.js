@@ -17,12 +17,12 @@ module.exports = [
         }
       `,
       resolveSiteUrl: ({ site }) => {
-        return site.wp.generalSettings.siteUrl
+        return site.siteMetadata.siteUrl
       },
       serialize: ({ site, allSitePage }) =>
         allSitePage.nodes.map(node => {
           return {
-            url: `${site.wp.generalSettings.siteUrl}${node.path}`,
+            url: `${site.siteMetadata.siteUrl}${node.path}`,
             changefreq: `daily`,
             priority: 0.7,
           }
