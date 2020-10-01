@@ -13,8 +13,8 @@ tags:
   - javascript
   - js
   - jest
-  - tdd
-  - tests
+  - testes-unitarios
+  - testes-de-integracao
 
 banner:
   author: Ferenc Almasi
@@ -38,4 +38,8 @@ Você pode clonar o projeto **final** pelo seguinte [repositório](https://githu
 
 Agora somente com todos os componentes em maões podemos começar nosso tutorial :)
 
-### O que é TDD?
+### O são testes unitários?
+
+Vamos imaginar os **contextos** resumidos de software, suas camadas, suas apis, sua ui quando por exemplo se trabalha com desenvolvimento front-end ou mobile. Nesta grama de contextos de códigos, podemos ter uma **granulação** ainda maior, pois seu programa vai ser escrito a partir de vários pequenos pedaços de outros códigos como **funções** e **classes** que podem interagir entre si. Gosto da analogia da construção de um software relacionado a peças de lego, onde cada peça de lego é uma função ou classe que podemos encaixar umas às outras para criar uma peça maior, e essas peças maiores podem por sua vez se conectar a outras peças menores ou mesmo outras maiores.
+
+Com isso em mente, podemos voltar a nossa pequena unidade de código que deve representar um código de **responsabilidade única**, pois é exatamente nela que se aplicam os **testes unitários**. Esse teste visa testar se uma função ou método de uma classe tem **sempre** uma resultado **constante esperado**. Podemos relacionar simplismente assim: dado um valor **x** como input de uma função, a mesma deve sempre retorna **y** em seu output.
