@@ -5,7 +5,7 @@ const HeaderPost = ({ title, subTitle, date, timeToRead }) => {
   return (
     <Content>
       <h1>{title}</h1>
-      <h2>{subTitle}</h2>
+      <p>{subTitle}</p>
       <Date>
         <span>{date} - </span>
         <span>{timeToRead} min read</span>
