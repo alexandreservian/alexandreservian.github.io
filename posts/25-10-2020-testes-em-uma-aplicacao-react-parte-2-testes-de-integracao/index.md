@@ -38,6 +38,12 @@ No meio da nossa pirâmide se encontra os testes de **integração**. Esses test
 
 Os testes de integração se **diferem** dos testes **end-to-end**(E2E), pois nos testes E2E testamos **toda** aplicação, por exemplo, ele simula um usuário interagindo em todas as telas de um sistema. Já o teste de integração visa testar somente **uma** funcionalidade do sistema.
 
+## Testes em componentes em react
+
+Bem um **componente em react** nada mais é que uma **função**(é possivel escrever usando classe também) que retorna um ou vários **elementos DOM** que podem conter uma lógica de apresentação ou outras funções vinculadas a **eventos** do componente como um botão que tem eventos como `onClick`. Visto desse prisma, muitos autores do tema de teste ou nós programadores entram em debates sobre em qual contexto se encaixa o testes em **componente react**, até mesmo na [documentação](https://pt-br.reactjs.org/docs/testing.html#tradeoffs) sobre testes do react não tem uma conclusão precisa sobre o **assunto**. Acredito que testes nos componentes estão ali na camada de **testes de integração**.
+
+E para realizar estes testes nos componentes, vamos usar a lib **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro)**. Ela fornece **utilitarios** que vão facilitar os nossos testes como por exemplo sua api de **[queries](https://testing-library.com/docs/dom-testing-library/api-queries)** que buscam elementos DOM no componente. Ela foca no componente e na interação do mesmo, sem se preocupar com detalhes da **implementação**. Ela já vem como default se você utiliza o **create-react-app**, se não, sua instalação é feita de forma simples, segue a **[documentação](https://testing-library.com/docs/dom-testing-library/install)**.
+
 ### Referências:
 
 - [A pirâmide de testes](https://medium.com/creditas-tech/a-pir%C3%A2mide-de-testes-a0faec465cc2)
