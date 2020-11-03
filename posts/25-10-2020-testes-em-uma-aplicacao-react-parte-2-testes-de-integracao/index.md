@@ -40,9 +40,35 @@ Os testes de integração se **diferem** dos testes **end-to-end**(E2E), pois no
 
 ## Testes em componentes em react
 
-Bem um **componente em react** nada mais é que uma **função**(é possivel escrever usando classe também) que retorna um ou vários **elementos DOM** que podem conter uma lógica de apresentação ou outras funções vinculadas a **eventos** do componente como um botão que tem eventos como `onClick`. Visto desse prisma, muitos autores do tema de teste ou nós programadores entram em debates sobre em qual contexto se encaixa o testes em **componente react**, até mesmo na [documentação](https://pt-br.reactjs.org/docs/testing.html#tradeoffs) sobre testes do react não tem uma conclusão precisa sobre o **assunto**. Acredito que testes nos componentes estão ali na camada de **testes de integração**.
+Bem um **componente em react** nada mais é que uma **função**(é possivel escrever usando classe também) que retorna um ou vários **elementos DOM** que podem conter uma lógica de apresentação ou outras funções vinculadas a **eventos** do componente como um botão que tem eventos como `onClick`. Visto desse prisma, muitos autores do tema de teste ou nós programadores entram em debates sobre em qual contexto se encaixa o testes em **componente react**, até mesmo na [documentação](https://pt-br.reactjs.org/docs/testing.html#tradeoffs) sobre testes do react não tem uma conclusão precisa sobre o **assunto**. Acredito que testes nos componentes estão dentro da camada de **testes de integração**.
 
 E para realizar estes testes nos componentes, vamos usar a lib **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro)**. Ela fornece **utilitarios** que vão facilitar os nossos testes como por exemplo sua api de **[queries](https://testing-library.com/docs/dom-testing-library/api-queries)** que buscam elementos DOM no componente. Ela foca no componente e na interação do mesmo, sem se preocupar com detalhes da **implementação**. Ela já vem como default se você utiliza o **create-react-app**, se não, sua instalação é feita de forma simples, segue a **[documentação](https://testing-library.com/docs/dom-testing-library/install)**.
+
+## Criando o nosso primeiro teste em componente react
+
+Dentro da pasta `src/components/form-currency-converter` crie o arquivo `index.spec.js`. Vamos ao primeiro teste:
+
+```javascript
+import React from "react"
+import { render } from "@testing-library/react"
+import FormCurrencyConverter from "."
+
+describe("Form Currency Converter", () => {
+  it("should render component", () => {
+    const { container } = createComponent()
+
+    expect(container.firstChild).toBeInTheDocument()
+  })
+})
+
+const createComponent = props => render(<FormCurrencyConverter {...props} />)
+```
+
+Neste primeiro teste podemos notar algumas funções, a primeira que vamos comentar é a função **render**. Ela é responsavel por renderizar o componente utilizando o [**JSDOM**](https://github.com/jsdom/jsdom) e devolver um objeto contendo diversas outras funções como **queries** para busca de elementos no **DOM** ou o objeto **container** que é um nó do **DOM** onde o componente react foi renderizado. O método **render** tem algumas [**opções**](https://testing-library.com/docs/react-testing-library/api#render-options), uma delas é justamente a definição do container da renderização, por default, o container será uma **div** onde o **RLT**(react library testing) vai chamar o método **append** do **document.body**.
+
+> Para se obter o **root element**(o componente que foi renderizado dentro do **container**) basta usar **container.firstChild**.
+
+A segunda função a ser comentada é o **custom matcher** **toBeInTheDocument**. Ele faz parte da library `@testing-library/jest-dom`. Essa [**library**](https://github.com/testing-library/jest-dom) tem objetivo de prover **custom matchers** para o **jest** que facilita a declaração dos nossos testes quando queremos testar o **estado do DOM**. Logo a **matcher** [**toBeInTheDocument**](https://github.com/testing-library/jest-dom#tobeinthedocument) válida está presente ou não no documento DOM.
 
 ### Referências:
 
